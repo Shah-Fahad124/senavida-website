@@ -96,33 +96,45 @@
 <html>
 
 <body class="bg-[#F5F7FA]">
-    <!-- Header -->
-    <header class="border-b border-1 flex items-center h-[63px] mx-auto">
-        <nav class="container flex items-center justify-between mx-auto">
+   <header class="border-b border-1 flex items-center h-[63px] mx-auto">
+    <nav class="container flex items-center justify-between mx-auto">
 
-            <div class="flex items-center w-[208px] h-[53px] relative">
-                <img src="./assets/MICHAELH-FF_Logo_Black.png" alt="" class="h-full w-full">
-            </div>
+        <!-- Logo -->
+        <div class="flex items-center w-[208px] h-[53px] relative">
+            <img src="./assets/MICHAELH-FF_Logo_Black.png" alt="" class="h-full w-full">
+        </div>
 
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-primary hover:text-gray-900 transition-colors font-[16px]">For Healthcare</a>
-                <a href="#"
-                    class="text-secondary hover:text-gray-900 transition-colors text-primary font-[16px]">Pricing</a>
-                <button
-                    class="btn-primary text-white hover:opacity-90 transition-all rounded-full text-[16px] font-semibold p-1 px-3">
-                    Sign up
-                </button>
-            </div>
-
-            <!-- Mobile menu button -->
-            <button class="md:hidden p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-primary hover:text-gray-900 transition-colors text-[16px]">For Healthcare</a>
+            <a href="#" class="text-secondary hover:text-gray-900 transition-colors text-[16px]">Pricing</a>
+            <button
+                class="btn-primary text-white hover:opacity-90 transition-all rounded-full text-[16px] font-semibold p-1 px-3">
+                Sign up
             </button>
-        </nav>
-    </header>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="md:hidden p-2" id="menu-toggle">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-[-5] right-0 flex-col space-y-4 px-6 mt-20 bg-white shadow-md md:hidden z-50">
+        <a href="#" class="block text-primary hover:text-gray-900 text-[16px]">For Healthcare</a>
+        <a href="#" class="block text-secondary hover:text-gray-900 text-[16px]">Pricing</a>
+        <button
+            class="btn-primary w-full text-white hover:opacity-90 transition-all rounded-full text-[16px] font-semibold p-2">
+            Sign up
+        </button>
+    </div>
+</header>
+
+
 
     <!-- Hero Section -->
     <section class="px-4 py-10 lg:py-20">
@@ -271,223 +283,312 @@
             </div>
     </section>
 
+    
+
     <!-- third section-------technology  -->
     <section class="relative">
-        <div class="py-8 max-w-full">
-            <div class="absolute right-0 -z-10 bottom-96">
-                <img src="Vector 321.svg" alt="">
+      <div class="py-8 max-w-full">
+        <div class="absolute right-0 -z-10 bottom-96">
+          <img src="Vector 321.svg" alt="" />
+        </div>
+        <div class="absolute left-0 -z-10 top-96">
+          <img src="Vector 321 (1).svg" alt="" />
+        </div>
+        <!-- Tools Section -->
+        <div class="max-w-7xl px-8 lg:px-14 mx-auto">
+          <!-- Header -->
+          <div class="text-center mb-16">
+            <div class="mb-3 flex items-center justify-center">
+              <p class="globe-container rounded-3xl px-4 py-1">Technology</p>
             </div>
-            <div class="absolute left-0 -z-10 top-96">
-                <img src="Vector 321 (1).svg" alt="">
-            </div>
-            <!-- Tools Section -->
-            <div class="max-w-7xl px-8 lg:px-14 mx-auto">
-                <!-- Header -->
-                <div class="text-center mb-16">
-                    <div class="mb-3 flex items-center justify-center">
-                        <p class="globe-container rounded-3xl px-4 py-1">
-                            Technology
-                        </p>
-                    </div>
-                    <h1 class="font-heading text-4xl font-600 md:text-[40px] text-primary font-semibold mb-6">
-                        Practical Tools For Today <em class="text-navy-blue font-500">Built for Growth</em>
-                    </h1>
-                    <p class="sub-heading text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
-                        Senavida begins here—an integrated platform designed to simplify the day-to-day so practitioners
-                        can focus
-                        on
-                        what matters most: healing and growth. These tools are live and available now, giving
-                        practitioners
-                        everything
-                        they need to build, manage, and expand their practice.
-                    </p>
+            <h1
+              class="font-heading text-4xl font-600 md:text-[40px] text-primary font-semibold mb-6"
+            >
+              Practical Tools For Today
+              <em class="text-navy-blue font-500">Built for Growth</em>
+            </h1>
+            <p
+              class="sub-heading text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed"
+            >
+              Senavida begins here—an integrated platform designed to simplify
+              the day-to-day so practitioners can focus on what matters most:
+              healing and growth. These tools are live and available now, giving
+              practitioners everything they need to build, manage, and expand
+              their practice.
+            </p>
+          </div>
+
+          <!-- Features Grid -->
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20 lg:h-[720px] items-stretch"
+          >
+            <!-- Column 1: top -->
+            <div
+              class="flex flex-col md:flex-row lg:flex-col lg:justify-start gap-8 h-full"
+            >
+              <!-- Card 1 -->
+              <div
+                class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Smart Calendar & Scheduling
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Intelligent scheduling system with automated reminders,
+                    conflict resolution, and seamless calendar integration for
+                    optimal time management.
+                  </p>
+                </div>
+                <div
+                  class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto"
+                >
+                  <img
+                    src="./assets/calender.png"
+                    class="w-[41px] h-[41px]"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div
+                class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Event Management
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Organize workshops, seminars, and group sessions with
+                    registration management, attendance tracking, and automated
+                    communications.
+                  </p>
                 </div>
 
-                <!-- Features Grid -->
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20 lg:h-[720px] items-stretch">
-                    <!-- Column 1: top -->
-                    <div class="flex flex-col md:flex-row lg:flex-col  lg:justify-start gap-8 h-full ">
-                        <!-- Card 1 -->
-                        <div
-                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Calendar & Scheduling</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Intelligent scheduling system with automated reminders, conflict resolution, and
-                                    seamless calendar
-                                    integration for optimal time management.
-                                </p>
-                            </div>
-                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
-                                <img src="./assets/calender.png" class="w-[41px] h-[41px]" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div
-                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Event Management</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Organize workshops, seminars, and group sessions with registration management,
-                                    attendance tracking,
-                                    and
-                                    automated communications.
-                                </p>
-                            </div>
-
-                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
-                                <img src="./assets/event-management.png" class="w-[41px] h-[41px]" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Column 2: center -->
-                    <div class="flex flex-col md:flex-row lg:flex-col lg:justify-center   gap-8 h-full">
-                        <!-- Card 2 -->
-                        <div
-                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Client Relationship Management
-                                    (CRM)</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Comprehensive client profiles with interaction history, preferences, and
-                                    personalized care plans for
-                                    enhanced relationship building.
-                                </p>
-                            </div>
-                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
-                                <img src="./assets/crm.png" class="w-[41px] h-[41px]" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div
-                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Paperless Intake Forms</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Digital intake forms with e-signatures, conditional logic, and automatic data
-                                    integration for
-                                    streamlined client onboarding processes.
-                                </p>
-                            </div>
-                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
-                                <img src="./assets/intake-form.png" class="w-[41px] h-[41px]" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Column 3: bottom -->
-                    <div class="flex flex-col md:flex-row lg:flex-col  lg:justify-end  gap-8 h-full">
-                        <!-- Card 3 -->
-                        <div
-                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Billing & Accounting</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Automated invoicing, payment processing, and financial reporting with insurance
-                                    claim management and
-                                    revenue tracking capabilities.
-                                </p>
-                            </div>
-                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
-                                <img src="./assets/billing.png" class="w-[41px] h-[41px]" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Card 6 -->
-                        <div
-                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Client Portal</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Secure client access to appointments, documents, progress tracking, and direct
-                                    communication channels
-                                    for enhanced engagement.
-                                </p>
-                            </div>
-                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
-                                <img src="./assets/client-portal.png" class="w-[41px] h-[41px]" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div
+                  class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto"
+                >
+                  <img
+                    src="./assets/event-management.png"
+                    class="w-[41px] h-[41px]"
+                    alt=""
+                  />
                 </div>
+              </div>
             </div>
 
-
-
-            <div class=" relative">
-                <!-- Top Section with Light Background -->
-                <div class="px-6 py-5">
-                    <!-- Coming Soon Header -->
-                    <div class="flex items-center justify-center">
-                        <span
-                            class="text-sm font-medium w-fit globe-container px-6 py-1 rounded-full text-gray-600 tracking-wide">Coming
-                            Soon</span>
-                    </div>
-
-                    <!-- Main Heading -->
-                    <div class="container mx-auto text-center mb-12">
-                        <h1 class="text-2xl md:text-[24px] font-semibold text-primary leading-relaxed mt-1">
-                            We're continually expanding Senavidia's technology to support practitioner growth:
-                        </h1>
-                    </div>
-
-                    <!-- Feature Cards -->
-                    <div
-                        class="absolute inset-x-0 top-[30%] transform -translate-y-1/2 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Advanced Analytics Card -->
-                        <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm ">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Advanced Analytics</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                gain powerful insights into performance and practice growth
-                            </p>
-                        </div>
-
-                        <!-- Consumer Listings Card -->
-                        <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm ">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Consumer Listings</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                get discovered by seekers searching for practitioners on Senavidia
-                            </p>
-                        </div>
-
-                        <!-- Lead Automation Card -->
-                        <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Lead Automation</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                capture, qualify, and nurture leads effortlessly
-                            </p>
-                        </div>
-                    </div>
+            <!-- Column 2: center -->
+            <div
+              class="flex flex-col md:flex-row lg:flex-col lg:justify-center gap-8 h-full"
+            >
+              <!-- Card 2 -->
+              <div
+                class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Client Relationship Management (CRM)
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Comprehensive client profiles with interaction history,
+                    preferences, and personalized care plans for enhanced
+                    relationship building.
+                  </p>
                 </div>
-                <div class="bg-slate-600 px-6 py-16 text-center">
-                    <div class="mx-auto mt-[100px]">
-                        <h2 class="text-3xl md:text-[40px] font-semibold text-white mb-6 font-heading">Available Today
-                        </h2>
-                        <p
-                            class="text-slate-200 text-base md:text-[18px] leading-relaxed mb-8 max-w-3xl mx-auto leading-[150%]">
-                            While Senavidia expands into experiences, media, marketplace, and community, our technology
-                            pillar
-                            is already here to support you. It's the foundation that empowers practitioners now—helping
-                            them run their practice with ease while positioning them to grow as Senavidia grows.
-                        </p>
-
-                        <!-- CTA Button -->
-                        <button
-                            class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 inline-flex items-center gap-2">
-                            Are you a practitioner?
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
+                <div
+                  class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto"
+                >
+                  <img
+                    src="./assets/crm.png"
+                    class="w-[41px] h-[41px]"
+                    alt=""
+                  />
                 </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div
+                class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Paperless Intake Forms
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Digital intake forms with e-signatures, conditional logic,
+                    and automatic data integration for streamlined client
+                    onboarding processes.
+                  </p>
+                </div>
+                <div
+                  class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto"
+                >
+                  <img
+                    src="./assets/intake-form.png"
+                    class="w-[41px] h-[41px]"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
 
+            <!-- Column 3: bottom -->
+            <div
+              class="flex flex-col md:flex-row lg:flex-col lg:justify-end gap-8 h-full"
+            >
+              <!-- Card 3 -->
+              <div
+                class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Billing & Accounting
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Automated invoicing, payment processing, and financial
+                    reporting with insurance claim management and revenue
+                    tracking capabilities.
+                  </p>
+                </div>
+                <div
+                  class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto"
+                >
+                  <img
+                    src="./assets/billing.png"
+                    class="w-[41px] h-[41px]"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div
+                class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Client Portal
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Secure client access to appointments, documents, progress
+                    tracking, and direct communication channels for enhanced
+                    engagement.
+                  </p>
+                </div>
+                <div
+                  class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto"
+                >
+                  <img
+                    src="./assets/client-portal.png"
+                    class="w-[41px] h-[41px]"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <!-- Top Section with Light Background -->
+          <div class="px-6 py-5">
+            <!-- Coming Soon Header -->
+            <div class="flex items-center justify-center">
+              <span
+                class="text-sm font-medium w-fit globe-container px-6 py-1 rounded-full text-gray-600 tracking-wide"
+                >Coming Soon</span
+              >
+            </div>
+
+            <!-- Main Heading -->
+            <div class="container mx-auto text-center mb-16 lg:mb-12">
+              <h1
+                class="text-2xl md:text-[24px] font-semibold text-primary leading-relaxed mt-1"
+              >
+                We're continually expanding Senavidia's technology to support
+                practitioner growth:
+              </h1>
+            </div>
+          </div>
+
+          <div class="bg-slate-600 px-10 text-center">
+            <!-- Feature Cards -->
+            <div
+              class="relative inset-x-0 transform mt-40 md:mt-0 -translate-y-1/2 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"
+            >
+              <!-- Advanced Analytics Card -->
+              <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                  Advanced Analytics
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  gain powerful insights into performance and practice growth
+                </p>
+              </div>
+
+              <!-- Consumer Listings Card -->
+              <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                  Consumer Listings
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  get discovered by seekers searching for practitioners on
+                  Senavidia
+                </p>
+              </div>
+
+              <!-- Lead Automation Card -->
+              <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                  Lead Automation
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  capture, qualify, and nurture leads effortlessly
+                </p>
+              </div>
+            </div>
+
+            <div class="mx-auto -mt-48 sm:-mt-40 md:-mt-0 mb-16 py-10">
+              <h2
+                class="text-3xl md:text-[40px] font-semibold text-white mb-6 font-heading"
+              >
+                Available Today
+              </h2>
+              <p
+                class="text-slate-200 text-base md:text-[18px] leading-relaxed mb-8 max-w-3xl mx-auto leading-[150%]"
+              >
+                While Senavidia expands into experiences, media, marketplace,
+                and community, our technology pillar is already here to support
+                you. It's the foundation that empowers practitioners now—helping
+                them run their practice with ease while positioning them to grow
+                as Senavidia grows.
+              </p>
+
+              <!-- CTA Button -->
+              <button
+                class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 inline-flex items-center gap-2"
+              >
+                Are you a practitioner?
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--4th Gloab image section  -->
@@ -843,7 +944,7 @@
                 Ready to grow your <span class="italic"> healing practice? </span>
             </h2>
             <p
-                class="sub-heading text-secondary text-xl md:text-[18px] leading-relaxed mb-6 leading-[150%] md:w-[900px] mx-auto">
+                class="sub-heading text-secondary text-xl md:text-[18px] leading-relaxed mb-6 leading-[150%] lg:w-[900px] mx-auto">
                 Turn your vintage Join today and simplify scheduling, billing, and client care—all in one place.  into
                 exceptional opportunities. Partner with VintBids to showcase and sell your rare coins, notes, and
                 artifacts.
@@ -889,6 +990,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
 </body>
 
