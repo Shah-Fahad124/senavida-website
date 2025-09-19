@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senavida - Healthcare Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-purple: #8B5CF6;
+            --secondary-purple: #A78BFA;
+            --light-purple: #EDE9FE;
+            --dark-blue: #1E293B;
+            --navy-blue: #334155;
+            --text-gray: #263245;
+            --light-gray: #E7E8F7;
+            --gradient-start: #B794F6;
+            --gradient-end: #667EEA;
+        }
+
+        .text-primary {
+            color: rgba(39, 51, 68, 1) !important;
+        }
+
+        .font-heading {
+            font-family: 'Playfair Display';
+        }
+
+        .sub-heading {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-600 {
+            font-weight: 600;
+        }
+
+        .bg-gradient-purple {
+            background: linear-gradient(135deg, rgba(208, 222, 248, 1) 0%, rgba(148, 163, 248, 1) 100%);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+        }
+
+        .bg-light-purple {
+            background: linear-gradient(135deg, #F3F0FF 0%, #E9D8FD 100%);
+        }
+
+        .light-purple-bg {
+            background-color: var(--light-purple);
+        }
+
+        .bg-dark-section {
+            background: var(--dark-blue);
+        }
+
+        .dark-footer-bg {
+            background-color: var(--dark-blue);
+        }
+
+        .text-primary {
+            color: var(--primary-purple);
+        }
+
+        .text-secondary {
+            color: var(--text-gray);
+        }
+
+        .btn-primary {
+            background: var(--primary-purple);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-purple);
+        }
+
+        .globe-container {
+            background: var(--light-gray);
+        }
+
+        .globe-dot {
+            width: 12px;
+            height: 12px;
+            background: #3B82F6;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .globe-svg {
+            width: 280px;
+            height: 280px;
+        }
+    </style>
+</head>
+<html>
+
+<body class="bg-[#F5F7FA]">
+
+    <!-- Header -->
+    <header class="border-b border-1 flex items-center h-[63px] mx-auto">
+        <nav class="container flex items-center justify-between mx-auto">
+
+            <div class="flex items-center w-[208px] h-[53px] relative">
+                <img src="./assets/MICHAELH-FF_Logo_Black.png" alt="" class="h-full w-full">
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-primary hover:text-gray-900 transition-colors font-[16px]">For Healthcare</a>
+                <a href="#"
+                    class="text-secondary hover:text-gray-900 transition-colors text-primary font-[16px]">Pricing</a>
+                <button
+                    class="btn-primary text-white hover:opacity-90 transition-all rounded-full text-[16px] font-semibold p-1 px-3">
+                    Sign up
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="px-4 py-10 lg:py-20">
+        <div class="absolute top-0 left-0 z-[-1]">
+            <img src="./assets/Vector 321.png" alt="">
+        </div>
+        <div class="absolute top-0 right-0 z-[-1]">
+            <img src="./assets/Vector 321 (1).png" alt="">
+        </div>
+        <div class="relative">
+            <div class="text-center mb-16 w-[937px]  mx-auto">
+                <h1 class="text-[40px] lg:text-[96px] text-primary leading-[1.16] font-heading font-normal">
+                    Simplifying the Path<br>
+                    To <em class="italic">Wellness</em>.
+                </h1>
+
+                <p class="text-[16px] lg:text-[18px] text-secondary mt-6 leading-relaxed sub-heading">
+                    Discover trusted holistic practitioners, transformative programs, and community experiences that
+                    restore the wellbeing of your body, mind, and spirit.
+                </p>
+
+                <button
+                    class="btn-primary text-white text-[18px] px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all mt-8">
+                    Are you a Practitioner?
+                </button>
+
+                <!-- Trust indicators -->
+                <div class="flex items-center justify-center space-x-4 text-sm text-secondary mt-6">
+                    <div class="flex items-center space-x-2">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 bg-gray-300 rounded-full border-2 border-white">
+                                <img src="./assets/Avatars.png" alt="">
+                            </div>
+                            <div class="w-8 h-8 bg-gray-400 rounded-full border-2 border-white">
+                                <img src="./assets/Avatars (1).png" alt="">
+
+                            </div>
+                            <div class="w-8 h-8 bg-gray-500 rounded-full border-2 border-white">
+                                <img src="./assets/Avatars (2).png" alt="">
+
+                            </div>
+                        </div>
+                        <span>
+                            All the tools to manage and grow your business so you can focus on what you do best –
+                            helping people heal.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Dashboard Mockup -->
+            <div class="flex justify-center w-full absolute">
+                <img src="./assets/dashboard.png" alt="" class='h-full w-[70%]'>
+            </div>
+        </div>
+        <div class="h-[40vh]"></div>
+    </section>
+
+    <!-- below hero dark-bg section  -->
+    <section class="bg-dark-section px-4 py-16 lg:py-28 h-[611px]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-[32px] font-semibold text-white mb-4 leading-tight font-heading mt-10">
+                    When you want to feel better, but finding help feels<br>
+                    overwhelming, confusing, and you don't know where to start...
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-[80%] mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl relative text-left h-[199px]">
+                    <p class="text-sm leading-relaxed text-white">
+                        When conventional medicine hasn’t delivered lasting results, you are left frustrated
+                    </p>
+                    <div
+                        class="absolute bottom-4 right-4 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <img src="./assets/solar_adhesive-plaster-bold-duotone.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl relative text-left text-gray-200 h-[199px]">
+                    <p class="text-sm leading-relaxed">
+                        Holistic practitioners are scattered across the internet, hard to find, and difficult to vet
+                    </p>
+                    <div
+                        class="absolute bottom-4 right-4 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <img src="./assets/solar_add-folder-bold-duotone.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl relative text-left text-gray-200 h-[199px]">
+                    <p class="text-sm leading-relaxed">
+                        Stress, sleep deprivation, and anxiety leave you with little energy to research alternative
+                        therapies
+                    </p>
+                    <div
+                        class="absolute bottom-4 right-4 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <img src="./assets/solar_bomb-emoji-bold-duotone.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- second section  -->
+    <section class="relative mx-auto px-6 lg:px-14">
+        <div class="max-w-full">
+            <div class="absolute right-0 -z-10 bottom-52">
+                <img src="Vector 321.svg" alt="">
+            </div>
+            <div class="absolute left-0 -z-10 top-96">
+                <img src="Vector 321 (1).svg" alt="">
+            </div>
+            <div class="flex items-center justify-center">
+                <div
+                    class="grid lg:grid-cols-2 gap-8 lg:gap-4  items-center px-4 lg:px-16 justify-center h-[545px] w-[1180px]">
+                    <!-- Left Content -->
+                    <div>
+                        <h2 class="text-3xl lg:text-3xl  font-bold text-primary font-heading mb-6">
+                            A comprehensive resource
+                            for your <em class="italic">healing journey.</em>
+                        </h2>
+                        <p class="text-secondary text-[18px] mb-4 leading-relaxed sub-heading">
+                            Senavida brings together trusted practitioners, wellness programs,
+                            and transformational experiences designed to support you on your wellness journey.
+                        </p>
+                        <p class="text-secondary text-[18px] leading-relaxed sub-heading">
+                            Connect with a trusted network of holistic practitioners offering a wide spectrum
+                            of care—ranging from acupuncture, chiropractic, and functional medicine to
+                            body-based practices, energy work, and sound healing. Explore both evidence-based
+                            and integrative approaches, all within a community designed to support your whole self.
+                            Engage in virtual circles and in-person experiences that foster belonging, growth,
+                            and shared healing.
+                        </p>
+                    </div>
+
+                    <!-- Right Content (Single Image) -->
+                    <div class="flex lg:justify-self-end">
+                        <img src="./assets/healing-journey.png" alt="Healing Journey Illustration"
+                            class="lg:max-w-md w-full  rounded-[60px] lg:rounded-[50px] " />
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- third section-------technology  -->
+    <section class="relative">
+        <div class="py-8 max-w-full">
+            <div class="absolute right-0 -z-10 bottom-96">
+                <img src="Vector 321.svg" alt="">
+            </div>
+            <div class="absolute left-0 -z-10 top-96">
+                <img src="Vector 321 (1).svg" alt="">
+            </div>
+            <!-- Tools Section -->
+            <div class="max-w-7xl px-8 lg:px-14 mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <div class="mb-3 flex items-center justify-center">
+                        <p class="globe-container rounded-3xl px-4 py-1">
+                            Technology
+                        </p>
+                    </div>
+                    <h1 class="font-heading text-4xl font-600 md:text-[40px] text-primary font-semibold mb-6">
+                        Practical Tools For Today <em class="text-navy-blue font-500">Built for Growth</em>
+                    </h1>
+                    <p class="sub-heading text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+                        Senavida begins here—an integrated platform designed to simplify the day-to-day so practitioners
+                        can focus
+                        on
+                        what matters most: healing and growth. These tools are live and available now, giving
+                        practitioners
+                        everything
+                        they need to build, manage, and expand their practice.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20 lg:h-[720px] items-stretch">
+                    <!-- Column 1: top -->
+                    <div class="flex flex-col md:flex-row lg:flex-col  lg:justify-start gap-8 h-full ">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Calendar & Scheduling</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Intelligent scheduling system with automated reminders, conflict resolution, and
+                                    seamless calendar
+                                    integration for optimal time management.
+                                </p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
+                                <img src="./assets/calender.png" class="w-[41px] h-[41px]" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Event Management</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Organize workshops, seminars, and group sessions with registration management,
+                                    attendance tracking,
+                                    and
+                                    automated communications.
+                                </p>
+                            </div>
+
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
+                                <img src="./assets/event-management.png" class="w-[41px] h-[41px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: center -->
+                    <div class="flex flex-col md:flex-row lg:flex-col lg:justify-center   gap-8 h-full">
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Client Relationship Management
+                                    (CRM)</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Comprehensive client profiles with interaction history, preferences, and
+                                    personalized care plans for
+                                    enhanced relationship building.
+                                </p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
+                                <img src="./assets/crm.png" class="w-[41px] h-[41px]" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div
+                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Paperless Intake Forms</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Digital intake forms with e-signatures, conditional logic, and automatic data
+                                    integration for
+                                    streamlined client onboarding processes.
+                                </p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
+                                <img src="./assets/intake-form.png" class="w-[41px] h-[41px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: bottom -->
+                    <div class="flex flex-col md:flex-row lg:flex-col  lg:justify-end  gap-8 h-full">
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Billing & Accounting</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Automated invoicing, payment processing, and financial reporting with insurance
+                                    claim management and
+                                    revenue tracking capabilities.
+                                </p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
+                                <img src="./assets/billing.png" class="w-[41px] h-[41px]" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div
+                            class="bg-[#E7E8F7] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-fit">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Client Portal</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Secure client access to appointments, documents, progress tracking, and direct
+                                    communication channels
+                                    for enhanced engagement.
+                                </p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center ml-auto">
+                                <img src="./assets/client-portal.png" class="w-[41px] h-[41px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class=" relative">
+                <!-- Top Section with Light Background -->
+                <div class="px-6 py-5">
+                    <!-- Coming Soon Header -->
+                    <div class="flex items-center justify-center  ">
+                        <span
+                            class="text-sm font-medium w-fit globe-container px-6 py-1 rounded-full text-gray-600 tracking-wide">Coming
+                            Soon</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <div class="container mx-auto text-center mb-12">
+                        <h1 class="text-2xl md:text-[24px] font-semibold text-primary leading-relaxed mt-1">
+                            We're continually expanding Senavidia's technology to support practitioner growth:
+                        </h1>
+                    </div>
+
+                    <!-- Feature Cards -->
+                    <div
+                        class="absolute inset-x-0 top-[30%] transform -translate-y-1/2 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Advanced Analytics Card -->
+                        <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm ">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Advanced Analytics</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                gain powerful insights into performance and practice growth
+                            </p>
+                        </div>
+
+                        <!-- Consumer Listings Card -->
+                        <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm ">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Consumer Listings</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                get discovered by seekers searching for practitioners on Senavidia
+                            </p>
+                        </div>
+
+                        <!-- Lead Automation Card -->
+                        <div class="bg-[#F5F7FA] rounded-lg p-6 shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Lead Automation</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                capture, qualify, and nurture leads effortlessly
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-600 px-6 py-16 text-center">
+                    <div class="mx-auto mt-[100px]">
+                        <h2 class="text-3xl md:text-[40px] font-semibold text-white mb-6 font-heading">Available Today
+                        </h2>
+                        <p
+                            class="text-slate-200 text-base md:text-[18px] leading-relaxed mb-8 max-w-3xl mx-auto leading-[150%]">
+                            While Senavidia expands into experiences, media, marketplace, and community, our technology
+                            pillar
+                            is already here to support you. It's the foundation that empowers practitioners now—helping
+                            them run their practice with ease while positioning them to grow as Senavidia grows.
+                        </p>
+
+                        <!-- CTA Button -->
+                        <button
+                            class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 inline-flex items-center gap-2">
+                            Are you a practitioner?
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!--4th Gloab image section  -->
+    <section class="relative">
+        <div class="py-16 px-4 max-w-[1147px] mx-auto">
+            <div class="absolute right-0 -z-10 bottom-96">
+                <img src="./assets/Vector 321.svg" alt="">
+            </div>
+            <div class="absolute left-0 -z-10 top-96">
+                <img src="./assets/Vector 321 (1).svg" alt="">
+            </div>
+
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center">
+                    <p
+                        class="sub-heading globe-container font-600 px-4 py-2 rounded-3xl text-sm text-gray-600 mb-4 tracking-wider uppercase">
+                        Consumer
+                        Application</p>
+                </div>
+                <h1 class="font-heading text-4xl md:text-5xl text-primary font-semibold mb-6">
+                    Personalized Wellness, <em class="text-navy-blue font-normal">Guided by AI</em>
+                </h1>
+                <p class="sub-heading text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+                    The Senavida Consumer App is designed to give people everywhere access to meaningful wellness
+                    guidance.Whether through traditional therapies or non-traditional practices, seekers can explore,
+                    discover, and connect with the right support
+                    through our thoughtful AI-powered companion, Zoe.
+                </p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Globe -->
+                <div class="bg-light-gray rounded-3xl p-8 globe-container  overflow-hidden">
+                    <img src="./assets/globe.png" alt="" class="w-full h-full">
+                </div>
+
+                <!-- Right Side - Features -->
+                <div class="space-y-8">
+
+                    <div>
+                        <h2 class="sub-heading text-2xl font-[600] text-primary mb-8">Zoe: Your Guide & Companion</h2>
+                    </div>
+
+                    <!-- Smart Discovery -->
+                    <div class="space-y-3">
+                        <h3 class="sub-heading font-600 font-semibold text-lg text-gray-800">Smart Discovery</h3>
+                        <p class="sub-heading text-gray-600 leading-relaxed">
+                            An interactive chatbot that helps clients find practitioners and
+                            therapies aligned with their language, culture, gender,
+                            ethnicity, spiritual affinity, and healing goals.
+                        </p>
+                    </div>
+
+                    <!-- Daily Guidance -->
+                    <div class="space-y-3">
+                        <h3 class="sub-heading font-600 font-semibold text-lg text-gray-800">Daily Guidance</h3>
+                        <p class="sub-heading text-gray-600 leading-relaxed">
+                            Proactive check-ins that encourage clients toward the
+                            behaviors and protocols set in partnership with their therapist
+                            or coach.
+                        </p>
+                    </div>
+
+                    <!-- 360° Health Coaching -->
+                    <div class="space-y-3">
+                        <h3 class="sub-heading font-600 font-semibold text-lg text-gray-800">360° Health Coaching</h3>
+                        <p class="sub-heading text-gray-600 leading-relaxed">
+                            Integration of mind, body, and spirit with data from labs,
+                            wearables, and in-person assessments, all organized into a
+                            clear and actionable framework.
+                        </p>
+                    </div>
+
+                    <!-- Human Connection -->
+                    <div class="space-y-3">
+                        <h3 class="sub-heading font-600 font-semibold text-lg text-gray-800">Human Connection</h3>
+                        <p class="sub-heading text-gray-600 leading-relaxed">
+                            Zoe can even leverage the voice of a client's therapist or
+                            coach, making the experience more personal, warm, and
+                            humanistic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Quote -->
+            <div class="text-center mt-16">
+                <p class="font-heading text-xl md:text-2xl text-primary max-w-3xl mx-auto leading-relaxed font-600">
+                    The consumer app is where the Senavida vision comes full circle—bringing
+                    access, personalization, and guidance into the hands of every seeker, wherever
+                    they are on their healing journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences section -->
+    <section class="relative py-8 px-4">
+        <div class="max-w-[1148px] mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center">
+                    <p
+                        class="globe-container font-600 w-fit px-4 py-2 rounded-3xl sub-heading text-sm text-primary mb-4 tracking-wider uppercase">
+                        Experiences
+                    </p>
+                </div>
+                <h1 class="font-heading text-4xl font-600 md:text-5xl text-primary font-semibold mb-6">
+                    Curated Journeys That Inspire <em class="text-navy-blue font-500">Healing & Connection</em>
+                </h1>
+                <p class="sub-heading text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+                    The Senavida team creates experiences that meet clients where they are—whether it's discovering a
+                    new practice
+                    close to home,
+                    diving deep in a transformational retreat, or joining a once-in-a-lifetime expedition.
+                </p>
+            </div>
+
+            <!-- Three Cards -->
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <!-- Localized Events -->
+                <div class="globe-container h-64 flex items-end rounded-3xl relative p-8 text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-white absolute top-6 right-4 rounded-full flex items-center justify-center">
+                        <img src="./assets/Vector.svg" alt="" class="">
+                    </div>
+                    <div class="flex items-start flex-col leading-relaxed">
+                        <h3 class="sub-heading font-600 font-semibold text-xl text-gray-800">Localized Events</h3>
+                        <p class="sub-heading text-gray-600 leading-relaxed text-start">
+                            Community gatherings, often free to the public
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Transformational Retreats -->
+                <div class="globe-container h-64 relative flex items-end rounded-3xl p-8 text-center">
+                    <div
+                        class="w-16 h-16 mx-auto  mb-6 absolute top-6 right-6 bg-white rounded-full flex items-center justify-center">
+                        <img src="./assets/vector1.svg" alt="">
+                    </div>
+                    <div class="flex items-start flex-col">
+                        <h3 class="sub-heading font-600 font-semibold text-xl text-gray-800">Transformational Retreats
+                        </h3>
+                        <p class="sub-heading text-gray-600 leading-relaxed text-start">
+                            Immersive healing journeys around the world
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Global Expeditions -->
+                <div class="globe-container h-64 relative flex items-end rounded-3xl p-8 text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-white absolute top-6 right-6 rounded-full flex items-center justify-center">
+                        <img src="./assets/vector2.svg" alt="">
+                    </div>
+                    <div class="flex items-start flex-col">
+                        <h3 class="sub-heading font-600 font-semibold text-xl text-gray-800">Global Expeditions</h3>
+                        <p class="sub-heading text-gray-600 leading-relaxed text-start">
+                            Tailored adventures guided by trusted providers
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- media section -->
+    <section class="py-10 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Label -->
+            <div class="text-center mb-5">
+                <span
+                    class="text-sm font-medium text-primary uppercase tracking-wider globe-container p-1 px-2 rounded-full">Media</span>
+            </div>
+            <!-- Heading -->
+            <div class="">
+                <h2 class="text-4xl lg:text-[40px] text-primary  mb-4 leading-tight font-heading text-center">
+                    Stories, Insights & Healing—<em class="font-serif">Shared with the World</em>
+                </h2>
+                <p class="text-lg text-secondary leading-relaxed text-center w-[80%] mx-auto">
+                    SenavIDA produces original content and conscious media to educate, inspire, and expand awareness.
+                    Streaming across F.A.S.T., YouTube, podcasts, and social channels, our media brings the mission to
+                    life.
+                </p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mt-8 w-[90%] mx-auto">
+                <!-- Left Side - Social Media Icons Layout -->
+                <div class="">
+                    <div class="w-[545px]">
+                        <!-- Using the provided image for the social media icons layout -->
+                        <img src="./assets/youtube-intsta-icons.png" alt="Social Media Icons Layout"
+                            class="w-full max-w-md h-auto" />
+                    </div>
+                </div>
+
+                <!-- Right Side - Content -->
+                <div class="space-y-8">
+
+                    <!-- Features List -->
+                    <div class="space-y-6">
+                        <!-- Original Series -->
+                        <div>
+                            <h3 class="font-semibold text-primary mb-1 text-[20px]">Original Series</h3>
+                            <p class="text-secondary">Including Trauma: Sources & Solutions and Project SenavIDA</p>
+                        </div>
+
+                        <!-- Community Content -->
+                        <div>
+                            <h3 class="font-semibold text-primary mb-1 text-[20px]">Community Content</h3>
+                            <p class="text-secondary">Highlights from experiences, expeditions, and providers</p>
+                        </div>
+
+                        <!-- Conscious Media Library -->
+                        <div>
+                            <h3 class=" font-semibold text-primary mb-1 text-[20px]">Conscious Media Library</h3>
+                            <p class="text-secondary">music, meditations, breathwork, and podcasts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Market Section -->
+    <section class="py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 max-w-[1102px]">
+                <div class="flex justify-center mb-1">
+                    <p class="text-sm text-gray-600 mb-2 w-fit globe-container p-1 px-2 rounded-full">Marketplace</p>
+                </div>
+                <h2 class="text-4xl md:text-[40px] font-semibold text-primary font-heading mb-4"
+                    style="line-height: 115.99999%;">
+                    A Curated Market for Mind, Body & Spirit
+                </h2>
+                <p class="text-secondary w-[80%] mx-auto text-[18px] leading-relaxed text-center">
+                    The Senavida Mindful Market is designed to serve both the provider community and the greater good.
+                    Every purchase contributes to healing, with 10% of profits funding scholarships that provide therapy
+                    and coaching for those who need it most but cannot afford it. 
+                </p>
+            </div>
+
+            <!-- Market Features Grid -->
+            <div class="flex gap-8">
+                <!-- Provider Offerings -->
+                <div class="bg-white rounded-2xl p-4 shadow-sm flex flex-col justify-between h-[365px] w-[369px]">
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Provider Offerings</h3>
+                        <p class="text-secondary text-[18px] leading-[150%]">
+                            Courses, content, and products from Senavida providers, carefully aligned with our vision
+                            for healing and transformation.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <img src="./assets/solar_book-bold-duotone.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curated Products -->
+                <div class="bg-white rounded-2xl p-4 shadow-sm flex flex-col justify-between h-[365px] w-[369px]">
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Curated Fair Trade</h3>
+                        <p class="text-secondary text-[18px] leading-[150%]">
+                            Global partnerships built on fairness, sustainability, and ethical practices. Supporting
+                            farmers, artisans, and workers worldwide ensures your purchases uplift communities and
+                            protect the planet.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <img src="./assets/solar_box-bold-duotone.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact with Every Purchase -->
+                <div class="bg-white rounded-2xl p-4 shadow-sm flex flex-col justify-between h-[365px] w-[369px]">
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Impact With Every Purchase</h3>
+                        <p class="text-secondary text-[18px] leading-[150%]">
+                            Shopping here means more than consumption—it’s contribution. Every transaction strengthens
+                            the healing movement while giving back to those in need.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <img src="./assets/solar_cart-4-bold-duotone.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <div class="h-[612px] flex items-center justify-center px-8 py-16" style="background:url('./assets/cta-bg.png');">
+
+        <div class="w-[1006px] text-center">
+            <h2 class="font-heading text-primary text-4xl md:text-[96px] font-bold mb-6  leading-[115.99999999999999%]">
+                Ready to grow your <span class="italic"> healing practice? </span>
+            </h2>
+            <p
+                class="sub-heading text-secondary text-xl md:text-[18px] leading-relaxed mb-6 leading-[150%] w-[900px] mx-auto">
+                Turn your vintage Join today and simplify scheduling, billing, and client care—all in one place.  into
+                exceptional opportunities. Partner with VintBids to showcase and sell your rare coins, notes, and
+                artifacts.
+            </p>
+
+            <button
+                class="btn-primary text-white text-[18px] px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all">
+                Are you a Practitioner?
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="dark-footer-bg py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="./assets/MICHAELH-FF_Logo_Black (1).png" alt="">
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex items-center space-x-8 mb-6 md:mb-0">
+                    <a href="#" class="text-white hover:text-purple-300 transition-colors">For Healthcare</a>
+                    <a href="#" class="text-white hover:text-purple-300 transition-colors">Pricing</a>
+                </nav>
+
+                <!-- Social Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center ">
+                        <img src="./assets/facebook.png" alt="">
+                    </a>
+                    <a href="#" class="w-10 h-10  rounded-full flex items-center justify-center ">
+                        <img src="./assets/twitter.png" alt="">
+                    </a>
+                    <a href="#" class="w-10 h-10  rounded-full flex items-center justify-center  ">
+                        <img src="./assets/youtube.png" alt="">
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center">
+                        <img src="./assets/behanch.png" alt="" class="w-full h-full">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
